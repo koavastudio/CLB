@@ -1,0 +1,877 @@
+{
+  "shopName": {
+    "type": "text",
+    "label": "Shop name (receipt header)",
+    "value": "Litter Buddy",
+    "group": "General"
+  },
+  "globalScale": {
+    "type": "slider",
+    "label": "Overall size (%)",
+    "value": 100,
+    "min": 40,
+    "max": 150,
+    "step": 1,
+    "group": "General"
+  },
+  "alignX": {
+    "type": "dropdown",
+    "label": "Horizontal align",
+    "value": "center",
+    "options": {
+      "left": "Left",
+      "center": "Center",
+      "right": "Right"
+    },
+    "group": "General"
+  },
+  "alignY": {
+    "type": "dropdown",
+    "label": "Vertical align",
+    "value": "bottom",
+    "options": {
+      "top": "Top",
+      "center": "Center",
+      "bottom": "Bottom"
+    },
+    "group": "General"
+  },
+  "speed": {
+    "type": "slider",
+    "label": "Animation speed (%)",
+    "value": 100,
+    "min": 50,
+    "max": 200,
+    "step": 5,
+    "group": "General"
+  },
+  "walkSpeed": {
+    "type": "slider",
+    "label": "Cat walking speed (%)",
+    "value": 100,
+    "min": 50,
+    "max": 200,
+    "step": 5,
+    "group": "General"
+  },
+  "catEntrance": {
+    "type": "dropdown",
+    "label": "Cats come from",
+    "value": "bottom",
+    "options": {
+      "bottom": "The bottom of the screen (hop up into the box)",
+      "auto": "The nearest screen side",
+      "left": "The left side",
+      "right": "The right side"
+    },
+    "group": "General"
+  },
+  "showLine": {
+    "type": "checkbox",
+    "label": "Cats wait in line next to the box when several events arrive (side entrances)",
+    "value": true,
+    "group": "General"
+  },
+  "catCharacters": {
+    "type": "checkbox",
+    "label": "Event characters: follow = kitten, sub = crown, big tip = swagger walk",
+    "value": true,
+    "group": "General"
+  },
+  "raidParty": {
+    "type": "checkbox",
+    "label": "Raids bring a party of cats (as many as fit in the box)",
+    "value": true,
+    "group": "General"
+  },
+  "idlePeek": {
+    "type": "checkbox",
+    "label": "Now and then a cat peeks over the rim while it is quiet",
+    "value": true,
+    "group": "General"
+  },
+  "peekEvery": {
+    "type": "slider",
+    "label": "Peek about every (seconds)",
+    "value": 40,
+    "min": 10,
+    "max": 300,
+    "step": 5,
+    "group": "General"
+  },
+  "nameTags": {
+    "type": "checkbox",
+    "label": "Viewer name tag above each cat",
+    "value": true,
+    "group": "General"
+  },
+  "showReceipt": {
+    "type": "checkbox",
+    "label": "Receipt pops up for every visit (later cats add their line to it)",
+    "value": true,
+    "group": "General"
+  },
+  "receiptSeconds": {
+    "type": "slider",
+    "label": "Receipt stays after the last visit (seconds)",
+    "value": 5,
+    "min": 1,
+    "max": 20,
+    "step": 0.5,
+    "group": "General"
+  },
+  "showShadows": {
+    "type": "checkbox",
+    "label": "Soft shadows under the box and the cats",
+    "value": true,
+    "group": "General"
+  },
+  "autoHide": {
+    "type": "dropdown",
+    "label": "Hide the widget while nothing is happening",
+    "value": "never",
+    "options": {
+      "never": "Never (always visible)",
+      "fade": "Yes - fade out",
+      "slide": "Yes - slide down off screen",
+      "pop": "Yes - shrink away"
+    },
+    "group": "General"
+  },
+  "autoHideDelay": {
+    "type": "number",
+    "label": "Seconds to stay visible after the last cat visit",
+    "value": 8,
+    "min": 1,
+    "max": 600,
+    "step": 1,
+    "group": "General"
+  },
+  "autoHideGoal": {
+    "type": "checkbox",
+    "label": "Also show the widget when the goal changes",
+    "value": true,
+    "group": "General"
+  },
+  "maxQueue": {
+    "type": "number",
+    "label": "Max cats waiting in line",
+    "value": 20,
+    "min": 1,
+    "max": 99,
+    "group": "General"
+  },
+  "maxInBox": {
+    "type": "slider",
+    "label": "Cats in the box at once",
+    "value": 3,
+    "min": 1,
+    "max": 4,
+    "step": 1,
+    "group": "General"
+  },
+  "catColorMode": {
+    "type": "dropdown",
+    "label": "Cat coats",
+    "value": "natural",
+    "options": {
+      "natural": "Natural coats (each viewer keeps the same cat)",
+      "event": "Fantasy color by event type",
+      "random": "Random fantasy colors",
+      "original": "Original grey"
+    },
+    "group": "Cat Coats"
+  },
+  "coatBlack": {
+    "type": "checkbox",
+    "label": "Black cats",
+    "value": true,
+    "group": "Cat Coats"
+  },
+  "coatGrey": {
+    "type": "checkbox",
+    "label": "Blue-grey cats",
+    "value": true,
+    "group": "Cat Coats"
+  },
+  "coatWhite": {
+    "type": "checkbox",
+    "label": "White cats",
+    "value": true,
+    "group": "Cat Coats"
+  },
+  "coatCream": {
+    "type": "checkbox",
+    "label": "Cream cats",
+    "value": true,
+    "group": "Cat Coats"
+  },
+  "coatGinger": {
+    "type": "checkbox",
+    "label": "Ginger cats",
+    "value": true,
+    "group": "Cat Coats"
+  },
+  "coatBrown": {
+    "type": "checkbox",
+    "label": "Chocolate cats",
+    "value": true,
+    "group": "Cat Coats"
+  },
+  "coatTabbyGrey": {
+    "type": "checkbox",
+    "label": "Grey tabby cats",
+    "value": true,
+    "group": "Cat Coats"
+  },
+  "coatTabbyGinger": {
+    "type": "checkbox",
+    "label": "Ginger tabby cats",
+    "value": true,
+    "group": "Cat Coats"
+  },
+  "coatTabbyBrown": {
+    "type": "checkbox",
+    "label": "Brown tabby cats",
+    "value": true,
+    "group": "Cat Coats"
+  },
+  "coatCalico": {
+    "type": "checkbox",
+    "label": "Calico cats",
+    "value": true,
+    "group": "Cat Coats"
+  },
+  "coatTuxedo": {
+    "type": "checkbox",
+    "label": "Tuxedo cats",
+    "value": true,
+    "group": "Cat Coats"
+  },
+  "catColorTip": {
+    "type": "colorpicker",
+    "label": "Tip / Super Chat (name tag + fantasy mode)",
+    "value": "#ff6fae",
+    "group": "Event Colors"
+  },
+  "catColorCheer": {
+    "type": "colorpicker",
+    "label": "Bits (name tag + fantasy mode)",
+    "value": "#b38cff",
+    "group": "Event Colors"
+  },
+  "catColorSub": {
+    "type": "colorpicker",
+    "label": "Sub / gift sub / member (name tag + fantasy mode)",
+    "value": "#ffc93c",
+    "group": "Event Colors"
+  },
+  "catColorFollow": {
+    "type": "colorpicker",
+    "label": "Follow (name tag + fantasy mode)",
+    "value": "#62b8ff",
+    "group": "Event Colors"
+  },
+  "catColorRaid": {
+    "type": "colorpicker",
+    "label": "Raid (name tag + fantasy mode)",
+    "value": "#ff8a3d",
+    "group": "Event Colors"
+  },
+  "catColorPoints": {
+    "type": "colorpicker",
+    "label": "Channel points (name tag + fantasy mode)",
+    "value": "#7ed957",
+    "group": "Event Colors"
+  },
+  "catColorChat": {
+    "type": "colorpicker",
+    "label": "Chat command (name tag + fantasy mode)",
+    "value": "#ff7b6b",
+    "group": "Event Colors"
+  },
+  "catSize": {
+    "type": "slider",
+    "label": "Cat size (%)",
+    "value": 100,
+    "min": 70,
+    "max": 130,
+    "step": 1,
+    "group": "Cat Coats"
+  },
+  "boxHue": {
+    "type": "slider",
+    "label": "Litter box hue (0 = original mint)",
+    "value": 0,
+    "min": 0,
+    "max": 359,
+    "step": 1,
+    "group": "Box Colors"
+  },
+  "boxSaturation": {
+    "type": "slider",
+    "label": "Litter box saturation (%)",
+    "value": 100,
+    "min": 0,
+    "max": 250,
+    "step": 1,
+    "group": "Box Colors"
+  },
+  "boxLightness": {
+    "type": "slider",
+    "label": "Litter box lightness",
+    "value": 0,
+    "min": -80,
+    "max": 80,
+    "step": 1,
+    "group": "Box Colors"
+  },
+  "barColor": {
+    "type": "colorpicker",
+    "label": "Goal bar fill color",
+    "value": "#ff5fa8",
+    "group": "Box Colors"
+  },
+  "barInk": {
+    "type": "colorpicker",
+    "label": "Goal bar text color",
+    "value": "#5a3424",
+    "group": "Box Colors"
+  },
+  "poopName1": {
+    "type": "text",
+    "label": "Swirl 1 name (caramel)",
+    "value": "Classic Swirl",
+    "group": "Swirls"
+  },
+  "poopName2": {
+    "type": "text",
+    "label": "Swirl 2 name (pink)",
+    "value": "Berry Swirl",
+    "group": "Swirls"
+  },
+  "poopName3": {
+    "type": "text",
+    "label": "Swirl 3 name (gold, big tips)",
+    "value": "Golden Nugget",
+    "group": "Swirls"
+  },
+  "poopName4": {
+    "type": "text",
+    "label": "Swirl 4 name (rainbow, subs + raids)",
+    "value": "Rainbow Swirl",
+    "group": "Swirls"
+  },
+  "goldenTip": {
+    "type": "number",
+    "label": "Tip that leaves a gold swirl (bits: x100)",
+    "value": 10,
+    "min": 0,
+    "group": "Swirls"
+  },
+  "poopSize": {
+    "type": "slider",
+    "label": "Swirl size (%)",
+    "value": 100,
+    "min": 60,
+    "max": 150,
+    "step": 1,
+    "group": "Swirls"
+  },
+  "maxPoops": {
+    "type": "slider",
+    "label": "Swirls the box holds",
+    "value": 12,
+    "min": 1,
+    "max": 12,
+    "step": 1,
+    "group": "Swirls"
+  },
+  "autoScoop": {
+    "type": "checkbox",
+    "label": "Scoop the box when it is full (even before the goal)",
+    "value": true,
+    "group": "Swirls"
+  },
+  "boxSize": {
+    "type": "slider",
+    "label": "Box size (%)",
+    "value": 100,
+    "min": 60,
+    "max": 130,
+    "step": 1,
+    "group": "Position"
+  },
+  "boxX": {
+    "type": "slider",
+    "label": "Box X offset",
+    "value": 0,
+    "min": -540,
+    "max": 140,
+    "step": 1,
+    "group": "Position"
+  },
+  "boxY": {
+    "type": "slider",
+    "label": "Box Y offset",
+    "value": 0,
+    "min": -400,
+    "max": 60,
+    "step": 1,
+    "group": "Position"
+  },
+  "receiptX": {
+    "type": "slider",
+    "label": "Receipt X offset (it opens on the roomier side of the box)",
+    "value": 0,
+    "min": -600,
+    "max": 600,
+    "step": 1,
+    "group": "Position"
+  },
+  "receiptY": {
+    "type": "slider",
+    "label": "Receipt Y offset",
+    "value": 0,
+    "min": -100,
+    "max": 500,
+    "step": 1,
+    "group": "Position"
+  },
+  "trigTip": {
+    "type": "checkbox",
+    "label": "Tips / Super Chats send a cat",
+    "value": true,
+    "group": "Triggers"
+  },
+  "minTip": {
+    "type": "number",
+    "label": "Minimum tip",
+    "value": 1,
+    "min": 0,
+    "group": "Triggers"
+  },
+  "trigCheer": {
+    "type": "checkbox",
+    "label": "Bits send a cat",
+    "value": true,
+    "group": "Triggers"
+  },
+  "minBits": {
+    "type": "number",
+    "label": "Minimum bits",
+    "value": 100,
+    "min": 1,
+    "group": "Triggers"
+  },
+  "trigSub": {
+    "type": "checkbox",
+    "label": "Subs / gift subs / members send a cat",
+    "value": true,
+    "group": "Triggers"
+  },
+  "trigFollow": {
+    "type": "checkbox",
+    "label": "Follows send a cat",
+    "value": true,
+    "group": "Triggers"
+  },
+  "trigRaid": {
+    "type": "checkbox",
+    "label": "Raids send a cat",
+    "value": true,
+    "group": "Triggers"
+  },
+  "trigChat": {
+    "type": "checkbox",
+    "label": "Chat command sends a cat",
+    "value": true,
+    "group": "Triggers"
+  },
+  "chatCommand": {
+    "type": "text",
+    "label": "Chat command",
+    "value": "!litter",
+    "group": "Triggers"
+  },
+  "chatPermission": {
+    "type": "dropdown",
+    "label": "Who can use the chat command",
+    "value": "everyone",
+    "options": {
+      "everyone": "Everyone",
+      "subs": "Subscribers / members + VIPs + mods",
+      "vips": "VIPs + mods",
+      "mods": "Mods only"
+    },
+    "group": "Triggers"
+  },
+  "chatCooldown": {
+    "type": "number",
+    "label": "Chat cooldown per viewer (seconds)",
+    "value": 60,
+    "min": 0,
+    "group": "Triggers"
+  },
+  "trigPoints": {
+    "type": "checkbox",
+    "label": "Twitch channel points send a cat",
+    "value": true,
+    "group": "Triggers"
+  },
+  "rewardName": {
+    "type": "text",
+    "label": "Channel point reward name (empty = any reward)",
+    "value": "Litter Visit",
+    "group": "Triggers"
+  },
+  "goalEnabled": {
+    "type": "checkbox",
+    "label": "Goal bar in the slot on the box",
+    "value": true,
+    "group": "Goal"
+  },
+  "goalTitle": {
+    "type": "text",
+    "label": "Goal title",
+    "value": "Litter Fund",
+    "group": "Goal"
+  },
+  "reachedText": {
+    "type": "text",
+    "label": "Text when the goal is reached",
+    "value": "SPARKLING CLEAN!",
+    "group": "Goal"
+  },
+  "idleText": {
+    "type": "text",
+    "label": "Slot text when the goal is off (empty = hide)",
+    "value": "",
+    "group": "Goal"
+  },
+  "goalTarget": {
+    "type": "number",
+    "label": "Goal target",
+    "value": 100,
+    "min": 1,
+    "group": "Goal"
+  },
+  "goalStart": {
+    "type": "number",
+    "label": "Starting amount",
+    "value": 0,
+    "min": 0,
+    "group": "Goal"
+  },
+  "goalFormat": {
+    "type": "dropdown",
+    "label": "Show progress as",
+    "value": "currency",
+    "options": {
+      "currency": "Money ($40 / $100)",
+      "number": "Number (40 / 100)",
+      "percent": "Percent (40%)"
+    },
+    "group": "Goal"
+  },
+  "currencySymbol": {
+    "type": "text",
+    "label": "Currency symbol (empty = your channel currency)",
+    "value": "",
+    "group": "Goal"
+  },
+  "goalAutoReset": {
+    "type": "checkbox",
+    "label": "After the scoop, the goal starts again (extra carries over)",
+    "value": true,
+    "group": "Goal"
+  },
+  "goalTip": {
+    "type": "checkbox",
+    "label": "Tips count",
+    "value": true,
+    "group": "Goal"
+  },
+  "goalTipValue": {
+    "type": "number",
+    "label": "Goal points per 1 tipped",
+    "value": 1,
+    "min": 0,
+    "group": "Goal"
+  },
+  "goalCheer": {
+    "type": "checkbox",
+    "label": "Bits count",
+    "value": true,
+    "group": "Goal"
+  },
+  "goalCheerValue": {
+    "type": "number",
+    "label": "Goal points per 100 bits",
+    "value": 1,
+    "min": 0,
+    "group": "Goal"
+  },
+  "goalSub": {
+    "type": "checkbox",
+    "label": "Subs count",
+    "value": true,
+    "group": "Goal"
+  },
+  "goalSubValue": {
+    "type": "number",
+    "label": "Goal points per sub",
+    "value": 5,
+    "min": 0,
+    "group": "Goal"
+  },
+  "goalFollow": {
+    "type": "checkbox",
+    "label": "Follows count",
+    "value": false,
+    "group": "Goal"
+  },
+  "goalFollowValue": {
+    "type": "number",
+    "label": "Goal points per follow",
+    "value": 1,
+    "min": 0,
+    "group": "Goal"
+  },
+  "goalRaid": {
+    "type": "checkbox",
+    "label": "Raids count",
+    "value": false,
+    "group": "Goal"
+  },
+  "goalRaidValue": {
+    "type": "number",
+    "label": "Goal points per raid",
+    "value": 5,
+    "min": 0,
+    "group": "Goal"
+  },
+  "goalChat": {
+    "type": "checkbox",
+    "label": "Chat visits count",
+    "value": false,
+    "group": "Goal"
+  },
+  "goalChatValue": {
+    "type": "number",
+    "label": "Goal points per chat visit",
+    "value": 1,
+    "min": 0,
+    "group": "Goal"
+  },
+  "goalPoints": {
+    "type": "checkbox",
+    "label": "Channel point visits count",
+    "value": false,
+    "group": "Goal"
+  },
+  "goalPointsValue": {
+    "type": "number",
+    "label": "Goal points per redemption",
+    "value": 1,
+    "min": 0,
+    "group": "Goal"
+  },
+  "resetToken": {
+    "type": "text",
+    "label": "Goal reset key (change it to restart progress + empty the box)",
+    "value": "1",
+    "group": "Goal"
+  },
+  "receiptFooter": {
+    "type": "text",
+    "label": "Receipt footer",
+    "value": "THANK MEOW!",
+    "group": "Receipt"
+  },
+  "receiptShowMessage": {
+    "type": "checkbox",
+    "label": "Print the viewer's message",
+    "value": true,
+    "group": "Receipt"
+  },
+  "receiptPaper": {
+    "type": "colorpicker",
+    "label": "Paper color",
+    "value": "#fffaf0",
+    "group": "Receipt"
+  },
+  "receiptInk": {
+    "type": "colorpicker",
+    "label": "Ink color",
+    "value": "#4a2e2a",
+    "group": "Receipt"
+  },
+  "bgStyle": {
+    "type": "dropdown",
+    "label": "Background",
+    "value": "none",
+    "options": {
+      "none": "Transparent (for your scene)",
+      "room": "Cozy peach room (built in)",
+      "custom": "My own image"
+    },
+    "group": "Background"
+  },
+  "bgImage": {
+    "type": "image-input",
+    "label": "Your background image",
+    "value": "",
+    "group": "Background"
+  },
+  "bgZoom": {
+    "type": "slider",
+    "label": "Background zoom (%)",
+    "value": 100,
+    "min": 100,
+    "max": 200,
+    "step": 1,
+    "group": "Background"
+  },
+  "bgDim": {
+    "type": "slider",
+    "label": "Background dimming (%)",
+    "value": 0,
+    "min": 0,
+    "max": 80,
+    "step": 1,
+    "group": "Background"
+  },
+  "soundOn": {
+    "type": "checkbox",
+    "label": "Sounds",
+    "value": true,
+    "group": "Audio"
+  },
+  "volume": {
+    "type": "slider",
+    "label": "Volume",
+    "value": 60,
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "group": "Audio"
+  },
+  "soundMeow": {
+    "type": "sound-input",
+    "label": "Meow (empty = built-in)",
+    "value": "",
+    "group": "Audio"
+  },
+  "soundDig": {
+    "type": "sound-input",
+    "label": "Digging in the sand (empty = built-in)",
+    "value": "",
+    "group": "Audio"
+  },
+  "soundPlop": {
+    "type": "sound-input",
+    "label": "Plop (empty = built-in)",
+    "value": "",
+    "group": "Audio"
+  },
+  "soundDone": {
+    "type": "sound-input",
+    "label": "Goal reached chime (empty = built-in)",
+    "value": "",
+    "group": "Audio"
+  },
+  "soundReceipt": {
+    "type": "sound-input",
+    "label": "Receipt printer (empty = built-in)",
+    "value": "",
+    "group": "Audio"
+  },
+  "testOrder": {
+    "type": "button",
+    "label": "Send a test cat (quick demo)",
+    "value": "order",
+    "group": "Test"
+  },
+  "testEvent": {
+    "type": "dropdown",
+    "label": "Test cat event type",
+    "value": "tip",
+    "options": {
+      "tip": "Tip",
+      "cheer": "Bits",
+      "sub": "Sub",
+      "follow": "Follow",
+      "raid": "Raid",
+      "points": "Channel points",
+      "chat": "Chat command"
+    },
+    "group": "Test"
+  },
+  "testGoalAmount": {
+    "type": "number",
+    "label": "Test goal amount",
+    "value": 10,
+    "min": 0,
+    "group": "Test"
+  },
+  "testGoal": {
+    "type": "button",
+    "label": "Add test amount to the goal",
+    "value": "goal",
+    "group": "Test"
+  },
+  "testCelebrate": {
+    "type": "button",
+    "label": "Play the scoop celebration",
+    "value": "celebrate",
+    "group": "Test"
+  },
+  "testStore": {
+    "type": "button",
+    "label": "Check saved data",
+    "value": "store",
+    "group": "Test"
+  },
+  "resetGoal": {
+    "type": "button",
+    "label": "Reset goal + empty the box",
+    "value": "reset",
+    "group": "Test"
+  },
+  "demoName": {
+    "type": "text",
+    "label": "Test viewer name (empty = random)",
+    "value": "",
+    "group": "Test"
+  },
+  "demoMessage": {
+    "type": "text",
+    "label": "Test message",
+    "value": "",
+    "group": "Test"
+  },
+  "forcePoop": {
+    "type": "number",
+    "label": "Always leave swirl # (0 = by event)",
+    "value": 0,
+    "min": 0,
+    "max": 4,
+    "group": "Test"
+  },
+  "demoPoops": {
+    "type": "number",
+    "label": "Show this many swirls in the box (-1 = real pile; for screenshots)",
+    "value": -1,
+    "min": -1,
+    "max": 12,
+    "group": "Test"
+  },
+  "demoGoal": {
+    "type": "number",
+    "label": "Show this goal amount (-1 = real; for screenshots, not saved)",
+    "value": -1,
+    "min": -1,
+    "group": "Test"
+  }
+}

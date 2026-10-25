@@ -1,0 +1,61 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Fredoka:wght@400;500;600;700&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<div id="lb-root">
+  <div id="lb-stage">
+    <img id="lb-bg" alt="" hidden>
+    <div class="lb-shadow" id="lb-shadow"></div>
+
+    <!-- 1024 x 1024 "machine space": the litter box, the sand, the pile, the cats, the scoop -->
+    <div id="lb-wrap">
+      <!-- z 1: back wall (above the rim line) -->
+      <div class="lb-art" id="lb-back">
+        <img id="lb-back-img" alt="">
+        <div class="lb-tint" id="lb-back-tint"></div>
+        <div class="lb-light" id="lb-back-light"></div>
+      </div>
+      <!-- z 2: sand mound, z 3: the pile of swirls, z 4: cats inside the box + the scoop -->
+      <img id="lb-sand" alt="">
+      <div id="lb-pile"></div>
+      <div id="lb-inside"></div>
+      <!-- z 5: front wall (rim + panel + feet) -->
+      <div class="lb-art" id="lb-front">
+        <img id="lb-front-img" alt="">
+        <div class="lb-tint" id="lb-front-tint"></div>
+        <div class="lb-light" id="lb-front-light"></div>
+      </div>
+      <!-- z 6: the goal bar inside the cream slot on the front panel -->
+      <div id="lb-slot">
+        <div id="lb-slot-fill"><i></i></div>
+        <div id="lb-slot-text"><span id="lb-slot-title"></span><span id="lb-slot-value"></span></div>
+      </div>
+      <canvas id="lb-sand-cv" width="1024" height="1024"></canvas>
+      <!-- z 8: cats on the floor (walking in, waiting in line, walking off) -->
+      <div id="lb-floor"></div>
+      <div id="lb-fx"></div>
+    </div>
+
+    <!-- the open receipt (a tab: later cats add their own line to it); cloned from the template below -->
+    <div id="lb-receipts"></div>
+    <div class="lb-receipt" id="lb-rc-tpl" hidden>
+      <div class="lb-rc-move">
+        <div class="lb-rc-paper">
+          <div class="lb-rc-head">
+            <img class="lb-rc-logo" data-rc="logo" alt="">
+            <div class="lb-rc-shop" data-rc="shop"></div>
+            <div class="lb-rc-meta"><span data-rc="no"></span><span data-rc="time"></span></div>
+          </div>
+          <div class="lb-rc-rule"></div>
+          <div class="lb-rc-for">FOR: <b data-rc="name"></b></div>
+          <div class="lb-rc-lines" data-rc="lines"></div>
+          <div class="lb-rc-rule"></div>
+          <div class="lb-rc-total"><span>TOTAL</span><span class="lb-rc-dots"></span><span class="lb-rc-tot" data-rc="total"></span></div>
+          <div class="lb-rc-thanks" data-rc="thanks"></div>
+          <div class="lb-rc-barcode" data-rc="barcode"></div>
+          <div class="lb-rc-code" data-rc="code"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="lb-top"></div>
+  </div>
+</div>

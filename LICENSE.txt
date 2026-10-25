@@ -1,0 +1,16 @@
+Litter Buddy - Interactive Cat Litter Box Stream Widget
+License & Terms of Use
+=======================================================
+
+Thank you for your purchase!
+
+YOU CAN
+- Use this widget on your own stream channels (Twitch, YouTube, etc.).
+- Customize the colors, text, events and settings as much as you like.
+
+YOU CAN'T
+- Resell, share, sublicense, or redistribute the files (in whole or in part).
+- Upload the files to another store, marketplace, or public repository.
+
+Single-seat personal-use license for the buyer.
+All artwork and code (c) POTHEARTS. All rights reserved.
