@@ -9,7 +9,13 @@ in the box and the cream slot on the box is your goal bar. When the goal is reac
 a giant scoop comes and cleans the box, with confetti.
 Works with StreamElements (Twitch & YouTube). No coding - copy & paste.
 
-START HERE
+ONE-CLICK INSTALL (recommended)
+Open "0 - ONE-CLICK INSTALL.html" and press "Install Litter Buddy", or go to:
+https://overlays.batary.dev/share/cmvnxv2k50001jg06zeqzghbc
+Log in to StreamElements - Litter Buddy is added to your overlays. Then add the
+overlay URL to OBS / Streamlabs as a Browser Source (1920x1080).
+
+MANUAL INSTALL
 Open "1 - START HERE - Setup Guide.html" for step-by-step install with copy buttons.
 
 LIVE PREVIEW
@@ -23,7 +29,7 @@ INSTALL
 3. Open the editor and paste each part into its matching tab:
    - Widget Code/1. HTML.txt   -> HTML tab
    - Widget Code/2. CSS.txt    -> CSS tab
-   - Widget Code/3. JS.txt     -> JS tab   (artwork embedded - nothing to upload)
+   - Widget Code/3. JS.txt     -> JS tab   (artwork loads automatically - nothing to upload)
    - Widget Code/4. Fields.txt -> Fields tab
    - Your settings: in the Live Preview press "Data" and paste it into the DATA tab
      (select everything there first and replace it). StreamElements keeps the settings
