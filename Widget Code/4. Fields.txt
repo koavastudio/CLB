@@ -586,6 +586,27 @@
     "value": true,
     "group": "Goal"
   },
+  "goalPeriod": {
+    "type": "dropdown",
+    "label": "Reset the goal automatically",
+    "value": "never",
+    "options": {
+      "never": "Never (only with the reset button / key)",
+      "daily": "Every day",
+      "weekly": "Every week (on Monday)",
+      "monthly": "Every month (on the 1st)"
+    },
+    "group": "Goal"
+  },
+  "goalPeriodHour": {
+    "type": "number",
+    "label": "A new day starts at (hour 0-23, your PC's clock)",
+    "value": 6,
+    "min": 0,
+    "max": 23,
+    "step": 1,
+    "group": "Goal"
+  },
   "goalTip": {
     "type": "checkbox",
     "label": "Tips count",

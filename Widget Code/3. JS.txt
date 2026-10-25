@@ -21,7 +21,7 @@
   var DEFAULT_POOPS = ['Classic Swirl', 'Berry Swirl', 'Golden Nugget', 'Rainbow Swirl'];
 
   var F = {}, currency = '$', el = {}, built = false, ready = false, lay = {};
-  var state = { goal: 0, orders: 0, poops: [], token: null, rounds: 0 };
+  var state = { goal: 0, orders: 0, poops: [], token: null, rounds: 0, period: '' };
   var queue = [], cooldowns = {}, celebrateUntil = 0, pendingClean = false, shownOffset = 0;
   var hideTimer = null, editorMode = false;   // auto-hide while idle (never hides inside the overlay editor)
   var anims = [], cats = [], parts = [], sandFx = [];
@@ -659,7 +659,7 @@
     clearTimeout(svDiag.t); svDiag.t = setTimeout(function () { box.hidden = true; }, 15000);
   }
   function save(now) {
-    saveStore({ goal: state.goal, orders: state.orders, poops: state.poops.slice(0, 12), rounds: state.rounds, token: state.token }, now);
+    saveStore({ goal: state.goal, orders: state.orders, poops: state.poops.slice(0, 12), rounds: state.rounds, token: state.token, period: state.period }, now);
   }
 
   /* ------------------------------------------------------------------ render loop */
@@ -1590,6 +1590,8 @@
     function lbAdopt(s) {                               // a save made with the current reset token
       state.goal = num(s.goal, 0); state.orders = num(s.orders, 0); state.token = str(F.resetToken, '1'); state.rounds = num(s.rounds, 0);
       state.poops = Array.isArray(s.poops) ? s.poops.map(function (v) { return clamp(Math.round(num(v, 0)), 0, 3); }).slice(0, 12) : [];
+      state.period = str(s.period, '');
+      return periodCheck(true);                         // a new day / week / month began while the overlay was closed
     }
     function lbShow() {
       var dg = num(F.demoGoal, -1);
@@ -1601,9 +1603,9 @@
     loadStore(function (s) {
       var token = str(F.resetToken, '1');
       if (!s || s.token !== token) {                    // first install, broken save or a deliberate reset
-        state.goal = num(F.goalStart, 0); state.orders = s ? num(s.orders, 0) : 0; state.poops = []; state.rounds = 0; state.token = token;
+        state.goal = num(F.goalStart, 0); state.orders = s ? num(s.orders, 0) : 0; state.poops = []; state.rounds = 0; state.token = token; state.period = periodKey();
         save(true);                                     // official pattern: create the key with the defaults right away
-      } else lbAdopt(s);
+      } else if (lbAdopt(s)) save();
       lbShow();
       ready = true;
       pump();
@@ -1762,6 +1764,29 @@
       state.goal = num(F.goalStart, 0); shownOffset = 0; state.poops = []; save(); renderPile(true); updateGoal();
     }
   }
+
+  /* Automatic goal reset every day / week (Monday) / month (the 1st). The "day" starts at goalPeriodHour on the
+     streaming PC's clock, so a stream that runs past midnight doesn't reset mid-stream. The key of the period the
+     goal belongs to is saved; when the current key differs, the goal starts again from goalStart and the box is
+     emptied (a running visit or scoop finishes first). Switching the mode only adopts the new key, no reset. */
+  function periodKey(at) {
+    var m = str(F.goalPeriod, 'never');
+    if (m !== 'daily' && m !== 'weekly' && m !== 'monthly') return '';
+    var d = new Date((at || Date.now()) - clamp(Math.round(num(F.goalPeriodHour, 6)), 0, 23) * 3600000);
+    if (m === 'weekly') d.setDate(d.getDate() - (d.getDay() + 6) % 7);
+    return m.charAt(0) + ':' + d.getFullYear() + '-' + (d.getMonth() + 1) + (m === 'monthly' ? '' : '-' + d.getDate());
+  }
+  function periodCheck(quiet) {                         // true when the state changed
+    var k = periodKey();
+    if (k === state.period) return false;
+    if (!k || !state.period || k.charAt(0) !== state.period.charAt(0)) { state.period = k; if (!quiet) save(); return true; }
+    if (!quiet && lbBusy()) return false;               // try again on the next tick
+    state.period = k; state.goal = num(F.goalStart, 0); state.poops = [];
+    if (quiet) return true;                             // onWidgetLoad saves + renders right after
+    shownOffset = 0; save(); renderPile(true); updateGoal();
+    return true;
+  }
+  setInterval(function () { if (ready) periodCheck(false); }, 30000);
 
   function onPoints(e, L) {
     var data = e.data || {};

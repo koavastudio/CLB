@@ -82,8 +82,11 @@ caramel or pink otherwise. The box holds up to 12; when it is full a scoop can c
 Tips, bits and subs feed the goal (follows, raids, chat and channel points optional).
 The bar in the cream slot shows the title and amount (money, numbers or percent).
 Reaching the goal brings the giant scoop + confetti, then the goal starts again.
-Progress and the swirls are saved across overlay refreshes. Change the "Goal reset key"
-to start over.
+Progress and the swirls are saved across overlay refreshes. To start over: Test ->
+"Reset goal + empty the box", or change the "Goal reset key".
+Automatic reset (Goal -> "Reset the goal automatically"): every day, every week (Monday)
+or every month (the 1st). The new day starts at 6:00 on your PC's clock by default, so a
+stream that runs past midnight is never reset in the middle; change the hour if you like.
 
 BOX COLOR
 Hue, Saturation and Lightness sliders recolor the box to any color. Hue 0 +
